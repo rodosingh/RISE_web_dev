@@ -1,0 +1,381 @@
+html, body
+{
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body
+{
+    margin: 0px;
+    padding: 0px;
+    background: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11pt;
+    font-weight: 300;
+    color: #6c6c6c
+}
+
+.container
+{
+    margin: 0px auto;
+    width: 1200px;
+}
+
+/*********************************************************************************/
+/* Image Style                                                                   */
+/*********************************************************************************/
+
+
+/*********************************************************************************/
+/* List Styles                                                                   */
+/*********************************************************************************/
+
+
+
+/*********************************************************************************/
+/* Social Icon Styles                                                            */
+/*********************************************************************************/
+
+ul.contact
+{
+    margin: 0;
+    padding: 2em 0em 0em 0em;
+    list-style: none;
+}
+
+ul.contact li
+{
+    display: inline-block;
+    padding: 0em 0.30em;
+    font-size: 2.5em;
+}
+
+ul.contact li span
+{
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.contact li a
+{
+    color: #FFF;
+}
+
+ul.contact li a:before
+{
+    display: inline-block;
+    background: #3f3f3f;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 35px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+ul.contact li a.icon-twitter:before { background: #2DAAE4; }
+ul.contact li a.icon-facebook:before { background: #39599F; }
+ul.contact li a.icon-dribbble:before { background: #C4376B;	}
+ul.contact li a.icon-tumblr:before { background: #31516A; }
+ul.contact li a.icon-rss:before { background: #F2600B; }
+
+
+/*********************************************************************************/
+/* Heading Titles                                                                */
+/*********************************************************************************/
+
+.title
+{
+    margin-bottom: 3em;
+}
+
+.title h2
+{
+    font-weight: 400;
+    font-size: 2.8em;
+    color: #ffffff;
+}
+
+.title .byline
+{
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.1em;
+    color: #068900;
+}
+
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+#header-wrapper
+{
+    margin: 0;
+}
+
+#header
+{
+    position: fixed;
+    /*overflow: hidden;*//*as dropdown disappears*/
+    height: 150px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.452);
+    padding-bottom:8px;
+    top: 0;
+    z-index: 1;
+}
+
+/*********************************************************************************/
+/* Logo                                                                          */
+/*********************************************************************************/
+
+.logo
+{
+    position: absolute;
+    top: 3em;
+    left: 6vw;
+    width: 190px;
+}
+
+.logo img
+{
+    width: 100%;
+    height: auto;
+}
+
+/*********************************************************************************/
+/* Menu                                                                          */
+/*********************************************************************************/
+
+#menu
+{
+    position: absolute;
+    right: 0;
+    top: 3.5em;
+}
+
+/*#menu ul
+{
+    display: inline-block;
+}*/
+
+#menu li
+{
+    display: inline-block;
+    text-align: center;
+    margin: 0.5em;
+    border-radius: 2mm;
+}
+
+#menu li a
+{
+    display: block;
+    margin: 0px 2px;
+    padding: 0em 1em;
+    letter-spacing: 0.20em;
+    line-height: 50px;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    outline: 0;
+    color: rgb(0, 0, 0);
+}
+
+#menu li:hover 
+{
+    background: #41efff;
+}
+#menu li a:hover
+{
+    color: rgb(0, 0, 0);
+}
+/*#menu .current_page_item
+{
+    background: #150122e0;
+    color: rgb(255, 255, 255);
+}*/ 
+/*********************************************************************************/
+/* Dropdown                                                                       /
+/*********************************************************************************/
+
+#dropdown-content 
+{
+    display: none;
+    position: absolute;
+    background-color: #ffffff9a;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+#dropdown-content li
+{
+    display: block;
+    text-align: left;
+    margin: 0;
+}
+#dropdown-content li a
+{
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+
+#dropdown-content li:hover
+{
+    background-color: rgba(167, 167, 167, 0.904);
+}
+
+#menu li:hover #dropdown-content
+{
+    display: block;
+}
+/*********************************************************************************/
+/* Images                                                                        */
+/*********************************************************************************/
+.slides-container
+{
+    margin-top: 15em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: auto;
+    position: relative;
+}
+.slides-text
+{
+    position: absolute;
+    width: auto;
+    left: 0;
+    right: 0;
+    bottom: 21px;
+    background-color: rgba(4, 101, 131, 0.479);
+    padding: 12px 12px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+.leftbar{
+    border-left: 20px solid rgba(189, 189, 189, 0.548);
+}
+.mySlides
+{
+    display: none;
+}
+/*********************************************************************************/
+/* Previous and Next button                                                      */
+/*********************************************************************************/
+.prev, .next
+{
+    cursor: pointer;
+    top: 50%;
+    position: absolute;
+    margin-top: auto;
+    width: auto;
+    padding: 10px;
+    border-radius: 0 3px 3px 0;
+    font-weight: bold;
+    font-size: medium;
+    color: white;
+    transition: 0.3s ease;
+    user-select: none;
+}
+.next
+{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover
+{
+    background-color: #030303;
+}
+/*********************************************************************************/
+/* Dots buton                                                                    */
+/*********************************************************************************/
+.dots
+{
+    cursor: pointer;
+    width: 20px;
+    height: 10px;
+    display: inline-block;
+    margin: 0 2px;
+    background-color: #888888;
+    transition: background-color 0.3s ease;
+    user-select: none;
+}
+.dots:hover
+{
+    background-color: #070707;
+}
+/*********************************************************************************/
+/* Animation                                                                     */
+/*********************************************************************************/
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    animation-name: fade;
+    animation-duration:2s;
+}
+@-webkit-keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
+
+@keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
+/*********************************************************************************/
+/* About Us                                                                      */
+/*********************************************************************************/
+#aboutus
+{
+    margin-top: 2em;
+    width: 100%;
+    background-color: transparent;
+    text-align: center;
+}
+#aboutus h1 a
+{
+    text-decoration: none;
+    color: rgb(59, 1, 1);
+}
+#about-cont
+{
+    text-align: left; 
+    background-color: rgba(81, 228, 241, 0.424); 
+    width: 85%;
+    font-size: larger;
+    margin: auto;
+    color: black;
+}
+/*********************************************************************************/
+/*Partners                                                                       */
+/*********************************************************************************/
+#partners
+{
+    margin-top: 2em;
+    width: 100%;
+    text-align: center;
+}
+#partners h1
+{
+    text-decoration: none;
+    color: rgb(59, 1, 1);
+}
+#partners-cont
+{
+    text-align: left; 
+    background-color: rgba(81, 228, 241, 0.424); 
+    width: 85%;
+    font-size: larger;
+    margin: auto;
+    color: black;   
+}

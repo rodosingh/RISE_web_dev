@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<title>RISE - Research Innovation and Science Entrepreneurship Foundation IISER</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="fonts.css" type="text/css" media="all" />
+
+<body>
+  <div id="header-wrapper">
+    <div id="header" class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/RISE.jpg" alt="RISE" width="500" height="500">
+        </a>
+      </div>
+      <div id="menu">
+        <ul>
+          <li class="current_page_item"><a href="#" accesskey="1" title="">Home</a></li>
+          <li><a href="#about" accesskey="2" title="">About Us</a>
+            <div id="dropdown-content">
+              <ul>
+                <li><a href="#dms">DMS</a></li>
+                <li><a href="#dps">DPS</a></li>
+                <li><a href="#dcs">DCS</a></li>
+                <li><a href="#dbs">DBS</a></li>
+                <li><a href="#des">DES</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#" accesskey="3" title="">Programmes</a>
+            <div id="dropdown-content">
+              <ul>
+                <li><a href="#dms">DMS</a></li>
+                <li><a href="#dps">DPS</a></li>
+                <li><a href="#dcs">DCS</a></li>
+                <li><a href="#dbs">DBS</a></li>
+                <li><a href="#des">DES</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#" accesskey="4" title="">Partners</a></li>
+          <li><a href="#" accesskey="5" title="">Incubatees</a></li>
+          <li><a href="#" accesskey="6" title="">Connect Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slides-container">
+    <div class="mySlides fade">
+      <img src="images/pic1.jpg" alt="blabla" style="width: 100%;">
+      <div class="slides-text leftbar"><p>BLABLA</p></div>
+    </div>
+    <div class="mySlides fade">
+      <img src="images/pic2.jpg" alt="blabla" style="width: 100%;">
+      <div class="slides-text leftbar"><p>BLABLA</p></div>
+    </div>
+    <div class="mySlides fade">
+      <img src="images/pic3.jpg" alt="blabla" style="width: 100%;">
+      <div class="slides-text leftbar"><p>BLABLA</p></div>
+    </div>
+    <div class="mySlides fade">
+      <img src="images/pic4.jpg" alt="blabla" style="width: 100%;">
+      <div class="slides-text leftbar"><p>BLABLA</p></div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <div style="text-align: center;">
+      <span class="dots" onclick="currentSlide(1)"></span> 
+      <span class="dots" onclick="currentSlide(2)"></span> 
+      <span class="dots" onclick="currentSlide(3)"></span>
+      <span class="dots" onclick="currentSlide(4)"></span> 
+    </div>
+  </div>
+  
+  
+  <script>
+  var slideIndex = 0;
+  var slides = document.getElementsByClassName("mySlides");
+  /*var dots = document.getElementsByClassName("dots");*/
+
+  showSlides();
+
+  function showSlides() {    
+    var i;    
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+    }
+    /*for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }*/
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1} 
+    slides[slideIndex-1].style.display = "block";
+    /*dots[slideIndex-1].className += "active"; */
+    setTimeout(showSlides, 5000); // Change image every 5 seconds
+  }
+
+  function currentSlide(no) {
+    var i;    
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+    }
+    /*for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }*/
+    slideIndex = no;
+    slides[no-1].style.display = "block";
+    /*dots[slideIndex-1].className += " active";*/
+  }
+
+  function plusSlides(n) {
+    var newslideIndex = slideIndex + n;
+    if(newslideIndex < 4 && newslideIndex > 0){
+      currentSlide(newslideIndex);
+    }
+  }
+  </script>
+  <div id = "aboutus">
+    <h1 id="about">
+      <a>About Us</a>
+    </h1>
+    <div id="about-cont">
+      kdsvlaibfvhsfvbdfvbskvsvubfvauebifvbweufysfyuugfcibgfcidcfbiciicudh
+      yudacbusyfacsbyusgfbcuydcicgyfiydgufcicgidsyugfisdyugsbyugaidygcbiay
+      asudcfaidsfuabuisgcfiagfi
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+    </div>
+  </div>
+  <div id="partners">
+    <h1>Partners</h1>
+    <div id="partners-cont">
+      kdsvlaibfvhsfvbdfvbskvsvubfvauebifvbweufysfyuugfcibgfcidcfbiciicudh
+      yudacbusyfacsbyusgfbcuydcicgyfiydgufcicgidsyugfisdyugsbyugaidygcbiay
+      asudcfaidsfuabuisgcfiagfi
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+    </div>
+  </div>
+</body>
+</html>
