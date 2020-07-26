@@ -1,0 +1,539 @@
+/*One common mistake we make is that while applying styles to <li> of 
+parent <div> it also gets apply to children <div>'s <li> as that also 
+is a <li> of parent <div>. So if we can change <li> to <span> then 
+it would be nice as the styles for <span> would remain as it is
+and the style for that will obviously couldn't transfer to <li> in children
+<div>*/
+/*One more thing:
+If u want to space around <div> the box, margin attribute would
+help, while for giving space around the border of <div> and inside
+<div> padding attribute would help.*/
+
+html, body
+{
+    height: 100%;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+body
+{
+    margin: 0px;
+    padding: 0px;
+    background: #fffbe1;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11pt;
+    font-weight: 300;
+    color: #a5a5a5
+}
+
+.container
+{
+    margin: 0px auto;
+    width: 1200px;
+    text-align: center;
+}
+/*.anchor
+{
+    scroll-margin-top: 1000px;
+}*/
+/*.offset
+{
+    margin-top: -100px;
+    height: 100px;
+    visibility: hidden;
+    display: block;
+}*/
+/*********************************************************************************/
+/* Image Style                                                                   */
+/*********************************************************************************/
+
+
+/*********************************************************************************/
+/* List Styles                                                                   */
+/*********************************************************************************/
+
+
+
+/*********************************************************************************/
+/* Social Icon Styles                                                            */
+/*********************************************************************************/
+/*********************************************************************************/
+/* Heading Titles                                                                */
+/*********************************************************************************/
+.title
+{
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    height: auto;
+}
+
+
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+#header-wrapper
+{
+    margin: 0;
+}
+
+#header
+{
+    /*overflow: hidden;*//*as dropdown disappears*/
+    position: fixed;
+    height: 10%;
+    background-color: #ffffb9;
+    width: 100%;
+    box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.452);
+    padding-bottom:10px;
+    top: 0;
+    z-index: 1;
+}
+
+/*********************************************************************************/
+/* Logo                                                                          */
+/*********************************************************************************/
+
+.logo
+{
+    position: absolute;
+    margin: 1.2em 0 0 10%;
+    width: 117px;
+    /*height: auto; no need to mention as img height is set to auto.*/
+    /*border: 1px solid black;*/
+    /*padding: 0; no need to mention as by default it takes padding value = 0*/
+}
+
+.logo img
+{
+    width: 100%;
+    height: auto;
+}
+
+/*********************************************************************************/
+/* Menu                                                                          */
+/*********************************************************************************/
+
+#menu
+{
+    position: absolute;
+    right: 0;
+    top: 2px;
+    padding: 1px;
+}
+
+/*#menu ul
+{
+    display: inline-block;
+}*/
+
+#menu li
+{
+    display: inline-block;
+    text-align: center;
+    margin: 0.5em;
+    border-radius: 2mm;
+}
+
+#menu li a
+{
+    display: block;
+    margin: 0px 2px;
+    padding: 0em 1em;
+    letter-spacing: 0.10em;
+    line-height: 50px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    /*text-transform: uppercase;*/
+    outline: 0;
+    color: rgb(0, 0, 0);
+}
+
+#menu li:hover
+{
+    background: #002020;
+    color: rgb(255, 255, 255);
+}
+#menu li:hover a
+{
+    color: rgb(255, 255, 255);
+}
+/*#menu li:active #menu li a
+{
+    color: rgb(255, 255, 255);
+}
+/*********************************************************************************/
+/* Dropdown                                                                       /
+/*********************************************************************************/
+
+#dropdown-content 
+{
+    display: none;
+    position: absolute;
+    background-color: #001b11e1;
+    min-width: 160px;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.801);
+    border-radius: 2mm;
+    z-index: 2;
+}
+
+#dropdown-content li
+{
+    display: block;
+    text-align: left;
+    margin: 0;
+}
+#dropdown-content li a
+{
+    float: none;
+    /*color: black;*/
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+#dropdown-content li:hover
+{
+    background-color: rgb(0, 0, 27);
+}
+
+#menu li:hover #dropdown-content
+{
+    display: block;
+}
+/*********************************************************************************/
+/* Images                                                                        */
+/*********************************************************************************/
+.slides-container
+{
+    margin-top: 8em;
+    margin-left: auto;
+    margin-right: auto;
+    /*padding: 5px;*//*Not required*/
+    width: 80%;
+    height: auto;
+    position: relative;
+}
+.slides-text
+{
+    position: absolute;
+    width: auto;
+    left: 0;
+    right: 0;
+    bottom: 21px;
+    background-image: linear-gradient(to right, rgba(7, 1, 27, 0.767), transparent);
+    padding: 12px 12px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    letter-spacing: 3px;
+}
+.leftbar{
+    border-left: 12px solid rgba(238, 238, 238, 0.808);
+}
+.mySlides
+{
+    display: none;
+}
+/*********************************************************************************/
+/* Previous and Next button                                                      */
+/*********************************************************************************/
+.prev, .next
+{
+    cursor: pointer;
+    top: 50%;
+    position: absolute;
+    margin-top: auto;
+    width: auto;
+    padding: 10px;
+    border-radius: 0 3px 3px 0;
+    font-weight: bold;
+    font-size: medium;
+    color: white;
+    transition: 0.3s ease;
+    user-select: none;
+}
+.next
+{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover
+{
+    background-color: #030303;
+}
+/*********************************************************************************/
+/* Dots buton                                                                    */
+/*********************************************************************************/
+.dots
+{
+    cursor: pointer;
+    width: 20px;
+    height: 10px;
+    display: inline-block;
+    margin: 0 2px;
+    background-color: #888888;
+    transition: background-color 0.3s ease;
+    user-select: none;
+}
+.dots:hover
+{
+    background-color: #070707;
+}
+/*********************************************************************************/
+/* Animation                                                                     */
+/*********************************************************************************/
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    animation-name: fade;
+    animation-duration:2s;
+}
+@-webkit-keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
+
+@keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
+/*********************************************************************************/
+/* About Us                                                                      */
+/*********************************************************************************/
+
+#about-cont
+{
+    text-align: left; 
+    background-color: #008080; 
+    width: 85%;
+    font-size: larger;
+    margin: auto;
+    color: rgb(255, 255, 255);
+}
+/*********************************************************************************/
+/*Partners                                                                       */
+/*********************************************************************************/
+
+#partners-cont
+{
+    text-align: left; 
+    background-color: #008080; 
+    width: 85%;
+    font-size: larger;
+    margin: auto;
+    color: rgb(255, 255, 255);   
+}
+/***********************************************************/
+/*Thrust areas of Incubation                               */
+/***********************************************************/
+.incubation
+{
+    text-align: left;
+    background-color: rgba(255, 241, 50, 0.856);
+    padding: 10px;
+    margin: 1em 6em;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.637);
+    color: rgb(32, 32, 32);
+    letter-spacing: 0.1em;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+}
+.incubation li
+{
+    line-height: 2em;
+}
+.incubation:hover
+{
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.726);
+}
+.incubation-title
+{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    letter-spacing: 0.1em;
+    text-shadow: 5px 5px 10px rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+}
+.img1
+{
+    height: 220px;
+    width: auto;
+    border: 4px solid rgb(8, 4, 63);
+    margin: 1em;
+}
+.clearfix
+{
+    overflow: auto;
+}
+/*********************************************************************************/
+/*Footer                                                                         */
+/*********************************************************************************/
+#footer
+{
+    background-color: #2a2a2a;
+    height: 18em;
+    width: 100%;
+}
+#links-cont
+{
+    
+    position: relative;
+    width: 80%;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    /*background-color: turquoise;*/
+}
+
+#links-cont span
+{
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+    display: inline-block;
+    padding:8px 2em 8px 0;
+    border-bottom: 1px solid rgb(77, 250, 233);
+    margin: 1em 4em 0 4em;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+.links-container, .cont-container
+{
+    margin-top: 0.5em;
+    position: absolute;
+    min-width: 200px;
+}
+
+.links-container li, .cont-container li
+{
+    display: block;
+    text-align: left;
+    letter-spacing: normal;
+    text-transform: none;
+}
+/*To remove extra space while in <ul> you need to set padding-left = 0% in <ul>*/
+.links-container li a
+{
+    text-decoration: none;
+    font-size: medium;
+    color: rgb(194, 194, 194);
+    line-height: 2em;
+}
+.cont-container li
+{
+    text-decoration: none;
+    text-align: left;
+    font-size: medium;
+    color: rgb(194, 194, 194);
+    line-height: 2em;
+}
+
+.links-container li a:hover
+{
+    color: white;
+}
+input[type=email]
+{
+    border: none;
+    border-bottom: 1px solid rgb(0, 124, 118);
+    padding: 8px 10px 8px 0;
+    width: auto;
+    margin-top: 1em;
+    color: rgb(146, 146, 146);
+    background-color: transparent;
+    font-size: medium;
+}
+input[type=email], select
+{
+    outline: none;
+}
+input[type=submit]
+{
+    margin: 1em auto 0 0;
+    padding: 15px;
+    background-color: rgb(77, 250, 233);
+    color: rgb(49, 49, 49);
+    width: auto;
+    border-radius: 25px;
+    border: none;
+    height: auto;
+    font-weight: 600;
+    font-size: medium;
+}
+input[type=submit]:hover
+{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+/* Icons */
+#fa-div
+{
+    display: inline-block;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding-top: 1em;
+    position: absolute;
+}
+
+.fa 
+{
+    padding: 10px;
+    font-size: 20px !important;
+    width: 20px;
+    margin: 5px 2px;
+    text-decoration: none;
+    border-radius: 50%;
+    box-shadow: 0px 5px 5px 0px aliceblue;
+    opacity: 0.8;
+}
+.fa:hover, .fa:active
+{
+    opacity: 1;
+    box-shadow:0 2px 2px 2px aliceblue;
+}
+.fa-facebook 
+{
+    background: #3b5998;
+    color: white;
+}
+  
+.fa-twitter 
+{
+    background: #00acee;
+    color: white;
+}
+  
+.fa-google 
+{
+    background: rgb(219, 68, 55);
+    color: white;
+}
+  
+.fa-linkedin 
+{
+    background: #007bb5;
+    color: white;
+}
+  
+.fa-youtube 
+{
+    background: #bb0000;
+    color: white;
+}    
+#copyright
+{
+    width: 100%;
+    height: 4%;
+    margin: 0;
+    border-top: 1px solid rgb(124, 124, 124);
+    background-color: #2a2a2a;
+    text-align: center;
+    padding: 8px 0;
+}    
